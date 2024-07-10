@@ -5,7 +5,7 @@ input$hour <- hour(input$Datetime_2)
 
 # adjust time (e.g. years to be included)
 input <- subset(input, input$year >= firstYear & input$year <= lastYear)
-unique(input$year)
+unique(input_ships_data$year)
 
 # include night and day distinction
 input_bymonth <- split(input, input$month)

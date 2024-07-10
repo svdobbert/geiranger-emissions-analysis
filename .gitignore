@@ -3,7 +3,9 @@
 *.pdf
 *.zip
 *.gz
+*.csv.gz
 
 # Input data #
 ###################
 input-data/
+output/
