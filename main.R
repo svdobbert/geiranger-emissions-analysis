@@ -20,6 +20,7 @@ source("../dependencies.R")
 ## Input
 # load data
 load("../input-data/input2015_2023") # input
+View(input)
 
 # adjust time (e.g. years to be included)
 firstYear <- 2015
@@ -37,7 +38,7 @@ source("../src/data-preperation.R")
 source("../src/get-time-in-port.R")
 source("../src/aggregate-hourly-data.R")
 
-# export <- input_daily[, -which(names(input_daily) %in% ship_names)]
+# export <- input[, -which(names(input) %in% ship_names)]
 # export$ferry <- input_daily$Ferry
 # export$date.1 <- NULL
-# fwrite(export, file = "../input-data/input_daily.csv.gz", compress = c("gzip"))
+fwrite(input_ships_data, file = "../input-data/input_full.csv.gz", compress = c("gzip"))
